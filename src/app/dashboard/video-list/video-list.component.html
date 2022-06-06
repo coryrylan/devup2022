@@ -1,4 +1,4 @@
-<div *ngFor="let video of videos">
-  <div><strong>{{video.title}}</strong></div>
-  <div>{{video.author}}</div>
-</div>
+<app-video-item
+  *ngFor="let video of videos"
+  [video]="video"
+></app-video-item>
