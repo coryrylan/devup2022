@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {Video} from "../types";
 
 @Component({
@@ -6,14 +6,13 @@ import {Video} from "../types";
   templateUrl: './video-dashboard.component.html',
   styleUrls: ['./video-dashboard.component.css']
 })
-export class VideoDashboardComponent implements OnInit {
+export class VideoDashboardComponent {
   videos = videoList;
+  selectedVideo: Video | undefined;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  selectVideo(video: Video) {
+    this.selectedVideo = video;
   }
-
 }
 
 const videoList: Video[] = [

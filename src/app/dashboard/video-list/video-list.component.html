@@ -1,4 +1,5 @@
 <app-video-item
   *ngFor="let video of videos"
   [video]="video"
+  (click)="selectVideo(video)"
 ></app-video-item>
